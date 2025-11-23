@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="et">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,41 +8,79 @@
     
     <title>Bootstrap 10</title>
 </head>
+<body>
 <div class="container">
     <div class="row">
         <div class="col-sm">
         <h1>ÕPILASE REGISTREERIMISVORM</h1>
-            <form action="#" method="post">
-                <fieldset>
-                    <legend>Kohustuslik info</legend>
-                    <br>
-                    <label for="Eesnimi">Eesnimi </label><br>
-                    <input id="Eesnimi" name="Eesnimi" type="text" maxlength="30" required placeholder="Eesnimi"><br>
-                    <br>
-                    <label for="Perenimi">Perenimi</label><br>                   
-                    <input id="Perenimi" name="Perenimi" type="text" maxlength="30" required placeholder="Perenimi"><br>
-                    <br>
-                    <label for="Sünnikuupäev">Sünnikuupäev</label><br>
-                    <input id="Sünnikuupäev" name="Sünnikuupäev" type="date" required min="1950-01-01" max="2025-12-13" value="1980-01-01"><br>
-                    <br>
-                    <label for="sugu">Sugu</label><br>
-                    <input type="radio" name="sugu" value="Naine"> Naine
-                    <input type="radio" name="sugu" value="Mees"> Mees
-                    <input type="radio" name="sugu" value="Muu"> Muu
-
+            <form action="#" method="post" autocomplete="on">
+                <fieldset class="border rounded-3 p-3">
+                    <legend class="float-none w-auto px-3" >Kohustuslik info</legend>
+                    <label for="eesnimi">Eesnimi </label><br>
+                    <input id="eesnimi" name="eesnimi" type="text" maxlength="30" required placeholder="Eesnimi"><br><br>
+                    <label for="perenimi">Perenimi</label><br>                   
+                    <input id="perenimi" name="perenimi" type="text" maxlength="30" required placeholder="Perenimi"><br><br>
+                    <label for="sünnikuupäev">Sünnikuupäev</label><br>
+                    <input id="sünnikuupäev" name="sünnikuupäev" type="date" required min="1950-01-01" max="2025-12-13" value="1980-01-01"><br><br>
+                    <label>Sugu</label><br>
+                    <input type="radio" id="sugu1" name="sugu" value="naine">
+                    <label for="sugu1">Naine</label>
+                    <input type="radio" id="sugu2" name="sugu" value="mees">
+                    <label for="sugu2">Mees</label>
+                    <input type="radio" id="sugu3" name="sugu" value="muu">
+                    <label for="sugu3">Muu</label>
                 </fieldset>
+                <fieldset class="border rounded-3 p-3">
+                    <legend class="float-none w-auto px-3" >Kontakt</legend>
+                    <label for="email">E-post</label><br>
+                    <input id="email" name="email" type="email" maxlength="100" required placeholder="nimi@kool.ee"><br>
+                    <br>
+                    <label for="mobiiltelefon">Mobiiltelefon</label><br>
+                    <input id="mobiiltelefon" name="mobiiltelefon" type="tel" pattern="\+372\s?\d{7,8}$" placeholder="+372 51234567"><br>
+                    <br>
+                    <label for="aadress">Aadress</label>
+                    <textarea id="aadress" name="aadress" rows="4" cols="30" placeholder="Tänav, maja, korter"></textarea><br>
+                    <br>
+                    <label for="linn">Linn/asula</label><br>
+                    <input id="linn" name="linn" type="text" maxlength="30" required placeholder="nt Tallinn"><br>
+                    <br>
+                    <label for="postiindeks">Postiindeks</label><br>
+                    <input id="postiindeks" name="postiindeks" type="text" pattern="\d{5}" placeholder="nt 10111"><br>
+                    <br>
+                    <label for="riik">Riik</label><br>
+                    <input id="riik" name="riik" type="text" value="Eesti" readonly><br>                
+                </fieldset>
+                <fieldset class="border rounded-3 p-3">
+                    <legend class="float-none w-auto px-3" >Muu info</legend>
+                    <label>Huvialad</label><br>
+                    <input type="checkbox" name="Joonistamine" value="Joonistamine"> Joonistamine
+                    <input type="checkbox" name="Laulmine" value="Laulmine"> Laulmine
+                    <input type="checkbox" name="Tantsimine" value="Tantsimine"> Tantsimine                    
+                    <input type="checkbox" name="Kokkamine" value="Kokkamine"> Kokkamine                    
+                    <input type="checkbox" name="Muu" value="Muu"> Muu
+                    <input type="text" name="Muu_huvialad"  maxlength="30" placeholder="täpsusta (kuni 30 tähemärki)"><br>
+                    <br>
+                    <label for="isiklikwwww">Isiklik veebileht</label><br>
+                    <input id="isiklikwwww" name="isiklikwwww" type="url" pattern="https?://.+" title="Lisa http://" placeholder="https://minuleht.ee"><br>
+                    <br>
+                    <label for="teemavarv">Eelistatud teemavärv (valikuline)</label><br>
+                    <input class="p-1" id="teemavarv" name="teemavarv" type="color" value="#0000ff"><br>
+                    <br>
+                    <label for="dokumendid">Dokumendid (PDF või pilt)</label><br>
+                    <input class="rounded-2" type="file" name="dokumendid" id="dokumendid" accept=".pdf, image/*" multiple><br>
+                </fieldset> 
+                <fieldset class="border rounded-3 p-3">
+                    <legend class="float-none w-auto px-3" >Nõustumine</legend>
+                    <input type="checkbox" name="Noustumine" required value="Noustumine"> Kinnitan, et esitatud andmed on õiged ja luban nende töötlemist vastavalt kooli tingimustele.<br>
+                </fieldset> 
+                <br>
+                <button class="border rounded-2" type="submit">Saada</button>
+                <button class="border rounded-2" type="reset">Tühjenda</button>                 
             </form>
 
 
         </div>
-
     </div>
-
-
-
-</div>
-
-<body>
-    
+</div>    
 </body>
 </html>
