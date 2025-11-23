@@ -8,7 +8,39 @@
     
     <title>Bootstrap 10</title>
 </head>
-<h1>Tere Bootstrap</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+        <h1>ÕPILASE REGISTREERIMISVORM</h1>
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Kohustuslik info</legend>
+                    <br>
+                    <label for="Eesnimi">Eesnimi </label><br>
+                    <input id="Eesnimi" name="Eesnimi" type="text" maxlength="30" required placeholder="Eesnimi"><br>
+                    <br>
+                    <label for="Perenimi">Perenimi</label><br>                   
+                    <input id="Perenimi" name="Perenimi" type="text" maxlength="30" required placeholder="Perenimi"><br>
+                    <br>
+                    <label for="Sünnikuupäev">Sünnikuupäev</label><br>
+                    <input id="Sünnikuupäev" name="Sünnikuupäev" type="date" required min="1950-01-01" max="2025-12-13" value="1980-01-01"><br>
+                    <br>
+                    <label for="sugu">Sugu</label><br>
+                    <input type="radio" name="sugu" value="Naine"> Naine
+                    <input type="radio" name="sugu" value="Mees"> Mees
+                    <input type="radio" name="sugu" value="Muu"> Muu
+
+                </fieldset>
+            </form>
+
+
+        </div>
+
+    </div>
+
+
+
+</div>
 
 <body>
     
