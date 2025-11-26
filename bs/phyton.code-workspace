@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "../../../phyton"
+		},
+		{
+			"name": "HTML_its25",
+			"path": ".."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "HTML_its25"
+	}
+}
